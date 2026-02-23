@@ -607,10 +607,7 @@ pub struct DedupeConfig {
     ///
     /// If not given, it is assumed to be the same as the
     /// `--rf-over` value in the earlier `fclones group` run.
-    #[arg(
-        short = 'n', long, value_name = "COUNT",
-        value_parser = clap::value_parser!(u64).range(1..)
-    )]
+    #[arg(short = 'n', long, value_name = "COUNT")]
     pub rf_over: Option<usize>,
 
     /// Restrict the set of files that can be removed or replaced by links to files
